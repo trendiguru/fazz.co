@@ -1,0 +1,16 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Fazz Site
+email: info@trendiguru.com
+description: Shop the Look from Any Picture. Just upload an image, and click to find similar results. Great for while you are browsing the web, on the go, or even scrolling through the feed
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://fazz.co" # the base hostname & protocol for your site
+github_username: trendiguru
+timezone: Asia/Jerusalem
+permalink: pretty
