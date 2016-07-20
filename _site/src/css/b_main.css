@@ -1,0 +1,247 @@
+body {
+    background: #f2f2f2;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+/*------ TYPOGRAPHY ------*/
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'HelveticaNeue-Thin','Helvetica Neue Thin';
+    font-weight: 200;
+    text-align: center;
+    margin: 1em;
+}
+
+section h1:first-child {
+    margin-top: .75em;
+}
+
+h2 {
+    max-width: 25em;
+    text-align: center;
+    font-family: 'HelveticaNeue-Medium','Helvetica Neue Medium';
+    color: #454545;
+    margin: auto;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #383838;
+}
+
+h4 {
+    font: inherit;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 1.25em;
+}
+
+/*------ LINKS ------*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+a:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: rebeccapurple;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    left: 50%;
+    transition: width .25s, left .25s;
+}
+
+a:hover {
+    color: rebeccapurple;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/*------ HEADER ------*/
+
+body.header {
+    padding: 3.8em 0 0;
+}
+
+header {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header img {
+    height: 2em;
+    margin: 1em 1.5em .9em;
+}
+
+header nav {
+    position: absolute;
+    top: .9em;
+    right: 0;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: .5em;
+    font-family: 'HelveticaNeue-Medium','Helvetica Neue Medium';
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+header nav ul li ul {
+    height: 0;
+    overflow: hidden;
+    padding: 0 1em;
+    background: #fff;
+    position: absolute;
+    top: 2.2em;
+    left: -2.5em;
+    transition: height .25s;
+}
+
+header nav ul li:hover ul {
+    height: 6.4em;
+    color: #000;
+}
+
+/*----- SECTION ------*/
+
+section, article {
+    padding: 1em 2em;
+    background: #fff;
+    display: block;
+    margin: 0 0 1em;
+}
+
+article {
+    max-width: 45em;
+    margin: 1em auto;
+}
+
+/*---- DEMO ----*/
+
+#demo {
+    max-width: calc(100% - 8em);
+    overflow: hidden;
+    background: none;
+    padding: 0 1em 0 0;
+    margin: 1em auto;
+    text-align: center;
+}
+
+#demo img {
+    width: 14em;
+    margin: 1em 0 0 1em;
+}
+
+@media (max-width: 640px) {
+    #demo img:nth-child(n + 2) {
+        display: none;
+    }
+}
+
+/*---- SOCIAL ----*/
+
+#social {
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#social img {
+    width: 2em;
+    height: 2em;
+    margin: 0 1em 1em 0;
+    transition: width .25s, height .25s;
+}
+
+#social a:last-of-type img {
+    margin-right: 0;
+}
+
+#social a {
+    position: relative;
+    color: inherit;
+}
+
+#social a:after {
+    width: 4em;
+    padding: .25em 1em;
+    border-radius: .4em;
+    content: attr(title);
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    position: absolute;
+    top: -2em;
+    left: -1em;
+    display: none;
+}
+
+#social a:hover:after {
+    display: block;
+}
+
+#social a img {
+
+}
+
+#social a:hover img {
+    width: 4em;
+    height: 4em;
+}
+
+/*---- CHROME ----*/
+
+#chrome {
+    max-width: 13em;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 1.05em;
+    display: block;
+    margin: auto;
+}
+
+#chrome p, h6 {
+    display: inline-block;
+    font: inherit;
+    font-weight: 400;
+    margin: 0;
+}
+
+#chrome p {
+    font-size: .8em;
+    margin-top: .8em;
+}
+
+#chrome img {
+    height: 3em;
+    float: left;
+    margin-right: 1em;
+}
