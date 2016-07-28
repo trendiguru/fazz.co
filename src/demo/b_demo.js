@@ -9977,7 +9977,7 @@
 	            return React.createElement(
 	                'div',
 	                null,
-	                React.createElement('img', { id: 'logo', className: Object.keys(components.App).length ? 'min' : '', src: 'logo.svg' }),
+	                React.createElement('img', { id: 'logo', className: Object.keys(components.App).length ? 'min' : '', src: '/src/img/fazz.svg' }),
 	                React.createElement(_search2.default, { className: Object.keys(components.App).length ? 'min' : '', search: this.search.bind(this) }),
 	                React.createElement(
 	                    'section',
