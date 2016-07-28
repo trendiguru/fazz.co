@@ -9890,7 +9890,7 @@
 	            api: new _api2.default(API_URLS[0]),
 	            components: {
 	                Discover: {
-	                    images: ['https://fazz.co/img/demo/gettyimages-490421970.jpg', 'https://fazz.co/img/demo/gettyimages-492504614.jpg', 'https://fazz.co/img/demo/gettyimages-494515956.jpg', 'https://fazz.co/img/demo/gettyimages-490421970.jpg', 'https://fazz.co/img/demo/gettyimages-492504614.jpg', 'https://fazz.co/img/demo/gettyimages-494515956.jpg', 'https://fazz.co/img/demo/gettyimages-490421970.jpg', 'https://fazz.co/img/demo/gettyimages-492504614.jpg', 'https://fazz.co/img/demo/gettyimages-494515956.jpg'],
+	                    images: ['/src/img/demo/gettyimages-492504614.jpg', '/src/img/demo/gettyimages-494515956.jpg', '/src/img/demo/gettyimages-490421970.jpg'],
 	                    search: _this.search.bind(_this)
 	                },
 	                App: {}
@@ -9927,7 +9927,6 @@
 	            };
 	            Promise.race([sources.get, sources.post]).then(function (res) {
 	                return new Promise(function (resolve, reject) {
-	                    console.log(res);
 	                    if (res.relevancy_dict) {
 	                        // Is it a POST result?
 	                        if (res.relevancy_dict[url]) {
@@ -9959,21 +9958,7 @@
 	                });
 	            }).catch(function () {
 	                return _this2.setState(function (state) {
-	                    var interval = setInterval(function () {
-	                        _this2.state.api.get(url).then(function (res) {
-	                            if (res) {
-	                                _this2.setState(function (state) {
-	                                    return Object.assign(state.components.App, { data: res });
-	                                });
-	                            }
-	                        });
-	                    }, 1000);
-	                    setTimeout(function () {
-	                        clearInterval(interval);
-	                        _this2.setState(function (state) {
-	                            return Object.assign(state.components.App, { data: null });
-	                        });
-	                    }, 120000);
+	                    state.components.App.data = null;
 	                });
 	            });
 	        }
@@ -9992,7 +9977,7 @@
 	            return React.createElement(
 	                'div',
 	                null,
-	                React.createElement('img', { id: 'logo', className: Object.keys(components.App).length ? 'min' : '', src: 'img/logo.svg' }),
+	                React.createElement('img', { id: 'logo', className: Object.keys(components.App).length ? 'min' : '', src: 'logo.svg' }),
 	                React.createElement(_search2.default, { className: Object.keys(components.App).length ? 'min' : '', search: this.search.bind(this) }),
 	                React.createElement(
 	                    'section',
