@@ -51,7 +51,7 @@ button {
     border-radius: 50%;
     background-size: cover;
     background-position: center;
-    background-color: #FF5792;
+    background-color: #f4709e;
     background-blend-mode: hard-light;
     margin: 3em auto; }
   .loading h3 {
@@ -64,14 +64,21 @@ button {
   background: rgba(0, 0, 0, 0.2); }
 
 #lightbox {
+  padding: 0;
+  overflow: hidden;
+  background: #fafafa;
+  border-radius: .125em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-transition: box-shadow .25s;
+  transition: box-shadow .25s;
   width: calc(100% - 10em);
   height: calc(100% - 10em);
-  background: #FAFAFA;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: fixed;
   top: 5em;
   left: 5em;
   z-index: 100; }
+  #lightbox:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); }
   #lightbox > div {
     height: 100%; }
   #lightbox #credit {
@@ -97,28 +104,42 @@ button {
     left: 0; } }
 
 #lightbox > aside {
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: .125em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-transition: box-shadow .25s;
+  transition: box-shadow .25s;
   max-width: 34%;
   height: 100%;
   background-position: center;
   background-size: cover;
   float: left;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 100; }
+  #lightbox > aside:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); }
 
 @media (max-width: 640px) {
   #lightbox > aside {
     display: none; } }
 
 nav {
+  padding: 0;
   overflow: hidden;
   background: #fff;
+  border-radius: .125em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow .25s;
+  transition: box-shadow .25s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 99;
   position: relative; }
+  nav:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
   nav .indicator {
     height: 3px;
     background: #ff4d8b;
@@ -139,7 +160,7 @@ nav {
       overflow: hidden;
       padding: 1em 0;
       font-weight: 600;
-      opacity: 0.5;
+      opacity: .5;
       cursor: pointer;
       text-align: center;
       text-transform: uppercase; }
@@ -158,18 +179,18 @@ nav {
       padding: .4em;
       -webkit-transition: background .25s, color .25s;
       transition: background .25s, color .25s; }
-    nav aside #close:hover, nav aside #feedback:hover {
+    nav aside #close:hover,
+    nav aside #feedback:hover {
       color: #fff; }
     nav aside #close:hover {
-      background: #E53935; }
+      background: #e63535; }
     nav aside #feedback:hover {
-      background: #FDD835; }
+      background: #fdd835; }
 
 main {
   height: calc(100% - 3em);
   overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
+  overflow-y: scroll; }
   main section {
     width: 100%;
     height: 100%;
@@ -187,12 +208,15 @@ main {
     left: 0; } }
 
 section div > div {
-  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: .125em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: box-shadow .25s;
-  transition: box-shadow .25s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  transition: box-shadow .25s; }
   section div > div:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); }
   section div > div img {
     width: 100%; }
   section div > div .tag {
@@ -206,19 +230,26 @@ section div > div {
       font-family: 'Rozha One', serif;
       color: #ff4d8b;
       display: block; }
-      section div > div .tag .price:before {
+      section div > div .tag .price::before {
         content: '$';
         font-family: 'Source Sans Pro', sans-serif;
         font-size: .75em;
         font-weight: bold; }
 
 .label {
+  padding: 0;
+  overflow: hidden;
   background: #fff;
+  border-radius: .125em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow .25s;
+  transition: box-shadow .25s;
   margin: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  display: flex; }
+  .label:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
   .label .img {
     width: 7em;
     height: 7em;
@@ -239,9 +270,6 @@ section div > div {
 body {
   overflow: hidden;
   font-family: 'Source Sans Pro', sans-serif; }
-
-[data-color="pink"] {
-  color: #ff4d8b; }
 
 #discover {
   width: calc(100% - 2em);
@@ -375,3 +403,5 @@ h1 {
   position: relative;
   top: 0;
   left: 0; }
+
+/*# sourceMappingURL=b_demo.css.map*/
